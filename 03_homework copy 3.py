@@ -1,5 +1,5 @@
 import random
-
+'''
 # Problem 0: Write a program that takes an integer input from the user and checks if it's odd or even.
 #   Use an if-else statement to print the result.
 while True:
@@ -19,9 +19,15 @@ for number in range(1, 101):
         sum_of_evens += number
 
 print("The sum of all even numbers from 1 to 100 is:", sum_of_evens)
-
+'''
 # Problem 2: Write a Python script that prompts the user in the console a simple problem
 # ( how much does 5 + 17 equal to ) until the user provides a correct answer.
 num1 = random.randint(1, 100)
 num2 = random.randint(1, 100)
 total = num1 + num2
+user_answer = float(input(f"What is result of {num1} + {num2}: "))
+while True:
+    if user_answer == total:
+        print("You guess correct!")
+    else:
+        print("You wrong!Try again!")
