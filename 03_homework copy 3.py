@@ -17,4 +17,7 @@ for number in range(1, 101):
         sum_of_evens += number
 
 print("The sum of all even numbers from 1 to 100 is:", sum_of_evens)
+
+# Problem 2: Write a Python script that prompts the user in the console a simple problem
+# ( how much does 5 + 17 equal to ) until the user provides a correct answer.
         
