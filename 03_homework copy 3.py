@@ -90,9 +90,35 @@ while is_running:
     else:
         print("Invalid guess!")
         print(f"Please select number between {low_num} and {hight_num} ")
-        '''
+        
+
 # Problem 6: Write a Python program that takes an integer input from the user
 # and prints the multiplication table for that number from 1 to 10 using a for loop
 user_number = int(input("Enter a number: "))
 for number in range (1, 11):
         print(f"{user_number} * {number} = {user_number * number}")
+        '''
+
+# Problem 7: Create a Python program that checks if a given integer is a prime number.
+# Use a for loop to iterate through possible divisors and use an if-else statement to determine if it's prime.
+def is_prime(number):
+    if number < 2:
+        return False
+
+    for i in range(2, int(number**0.5) + 1):
+        if number % i == 0:
+            return False
+    return True
+
+while True:
+    num = int(input("Enter an integer to check if it's a prime number: "))
+
+    if is_prime(num):
+        print(f"{num} is a prime number.")
+    else:
+        print(f"{num} is not a prime number.")
+    
+    try_again = input("Try again (y/n)? ").lower()
+    if try_again != "y":
+        print("Bye!")
+        break
