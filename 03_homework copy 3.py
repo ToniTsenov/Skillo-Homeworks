@@ -55,12 +55,11 @@ for number in range(1, 1001):
         print(f"{number} Buzz")
     else:
         print(number)
-        '''
+        
 # Problem 4: Design a Python program that simulates a simple guessing game.
 # The program should generate a random number between 1 and 100 and ask the user to guess it.
 # Provide hints like "Too high" or "Too low" until the user 
 # guesses the correct number. Use a while loop for this game.
-
 low_num = 1
 hight_num = 100
 answer = random.randint(low_num, hight_num)
@@ -91,3 +90,9 @@ while is_running:
     else:
         print("Invalid guess!")
         print(f"Please select number between {low_num} and {hight_num} ")
+        '''
+# Problem 6: Write a Python program that takes an integer input from the user
+# and prints the multiplication table for that number from 1 to 10 using a for loop
+user_number = int(input("Enter a number: "))
+for number in range (1, 11):
+        print(f"{user_number} * {number} = {user_number * number}")
