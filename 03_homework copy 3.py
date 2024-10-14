@@ -1,5 +1,5 @@
 import random
-'''
+
 # Problem 0: Write a program that takes an integer input from the user and checks if it's odd or even.
 #   Use an if-else statement to print the result.
 while True:
@@ -97,7 +97,7 @@ while is_running:
 user_number = int(input("Enter a number: "))
 for number in range (1, 11):
         print(f"{user_number} * {number} = {user_number * number}")
-        '''
+        
 
 # Problem 7: Create a Python program that checks if a given integer is a prime number.
 # Use a for loop to iterate through possible divisors and use an if-else statement to determine if it's prime.
@@ -122,3 +122,14 @@ while True:
     if try_again != "y":
         print("Bye!")
         break
+        
+
+# Problem 8: Write a program that takes an integer 'n' as input
+# and prints the following pattern using nested for loops:
+n = int(input("Enter the number of rows: "))
+
+for i in range(1, n + 1):
+    for j in range(1, i + 1):
+        print(j, end="")
+    print()
+# tazi zada4a ne q razbrah
