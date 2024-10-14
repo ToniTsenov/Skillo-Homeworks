@@ -46,3 +46,12 @@ random_sum_game()
 # Problem 3: Write a Python script that iterates over the first 1000 numbers and prints "Fizz" if the number is divisible by 3,
 # "Buzz" if it's divisible by 5, and "FizzBuzz" if it's divisible by both 3 and 5.
 
+for number in range(1, 1001):
+    if number % 3 == 0 and number % 5 == 0:
+        print(f"{number} FizzBuzz")
+    elif number % 3 == 0:
+        print(f"{number} Fizz")
+    elif number % 5 == 0:
+        print(f"{number} Buzz")
+    else:
+        print(number)
