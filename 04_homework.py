@@ -9,3 +9,8 @@ def sum_elements(arr):
 print(sum_elements([1, 2, 3, 4, 5]))
 print(sum_elements([10, 20, 30]))
 print(sum_elements([100]))
+
+# Problem 1:
+# Simple Calculator Function
+# Define a function called `simple_calculator` that takes two numbers and an operator ('+', '-', '*', or '/')
+# as arguments and returns the result of the operation.
