@@ -1,12 +1,15 @@
+'''
 # Exercise 1: Write a function to: Print numbers from 5 to 19
 def print_numbers():
     for x in range(1, 20):
         print(x)
 print_numbers()
-
+'''
 # Exercise 2: Write a function to:  Calculate the factorial of a number
+import math
 def factorial(num):
-    ...
+    print(math.factorial(num))
+factorial(5)
 
 
 # Exercise 3: Write a function to: Check if element is in a list. It should return True or False
