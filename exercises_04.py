@@ -26,7 +26,7 @@ def starts_with_vowel(name):
 def extract_even_numbers(numbers):
     ...
 
-'''
+
 print("\nTesting check_element_in_list() function:")
 assert check_element_in_list(3, [1, 2, 3, 4, 5]), ("check_element_in_list() failed for element present in"
                                                    " the list")
@@ -50,4 +50,3 @@ assert extract_even_numbers([-2, -1, 0, 1, 2, 3]) == [-2, 0, 2], ("extract_even_
                                                                   " numbers")
 print("extract_even_numbers() function passed the test.")
 print("All tests passed!")
-'''
