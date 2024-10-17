@@ -1,4 +1,4 @@
-'''
+
 # Exercise 1: Write a function to: Print numbers from 5 to 19
 def print_numbers():
     for x in range(1, 20):
@@ -20,15 +20,22 @@ def check_element_in_list(element_to_find, lst):
             return True
     print(f"{element_to_find} is not in the list.")
     return False
-'''
+
 # Exercise 4: Write a function to: Check if a given name starts with a vowel. It should return True or False
 def starts_with_vowel(name):
-    ...
+    for letter in name:
+        if letter == ("A" or "E" or "I" or "O" or "U"):
+            print(f"{name} starts whit vowel")
+            return True
+    print(f"{name} doesnt start whit vowel")
+    return False
+
 
 
 # Exercise 5: Write a function which takes in a list of numbers and gives me back another list with only the even ones
 def extract_even_numbers(numbers):
-    ...
+    return [num for num in numbers if num % 2 == 0]
+    
 
 
 print("\nTesting check_element_in_list() function:")
