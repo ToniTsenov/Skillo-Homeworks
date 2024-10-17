@@ -4,7 +4,7 @@ def print_numbers():
     for x in range(1, 20):
         print(x)
 print_numbers()
-'''
+
 # Exercise 2: Write a function to:  Calculate the factorial of a number
 import math
 def factorial(num):
@@ -13,10 +13,14 @@ factorial(5)
 
 
 # Exercise 3: Write a function to: Check if element is in a list. It should return True or False
-def check_element_in_list(element, lst):
-    ...
-
-
+def check_element_in_list(element_to_find, lst):
+    for item in lst:
+        if item == element_to_find:
+            print(f"{element_to_find} is in the list.")
+            return True
+    print(f"{element_to_find} is not in the list.")
+    return False
+'''
 # Exercise 4: Write a function to: Check if a given name starts with a vowel. It should return True or False
 def starts_with_vowel(name):
     ...
