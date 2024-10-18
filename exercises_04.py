@@ -34,7 +34,9 @@ def starts_with_vowel(name):
 
 # Exercise 5: Write a function which takes in a list of numbers and gives me back another list with only the even ones
 def extract_even_numbers(numbers):
-    return [num for num in numbers if num % 2 == 0]
+    even_numbers = [num for num in numbers if num % 2 == 0]
+    print(even_numbers)
+    return even_numbers
     
 
 
