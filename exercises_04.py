@@ -38,8 +38,7 @@ def extract_even_numbers(numbers):
     print(even_numbers)
     return even_numbers
     
-
-
+    
 print("\nTesting check_element_in_list() function:")
 assert check_element_in_list(3, [1, 2, 3, 4, 5]), ("check_element_in_list() failed for element present in"
                                                    " the list")
