@@ -21,6 +21,7 @@ def check_element_in_list(element_to_find, lst):
     print(f"{element_to_find} is not in the list.")
     return False
 
+
 # Exercise 4: Write a function to: Check if a given name starts with a vowel. It should return True or False
 def starts_with_vowel(name):
     for letter in name:
@@ -38,7 +39,7 @@ def extract_even_numbers(numbers):
     print(even_numbers)
     return even_numbers
     
-    
+
 print("\nTesting check_element_in_list() function:")
 assert check_element_in_list(3, [1, 2, 3, 4, 5]), ("check_element_in_list() failed for element present in"
                                                    " the list")
