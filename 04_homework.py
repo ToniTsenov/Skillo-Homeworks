@@ -1,4 +1,4 @@
-
+'''
 # Problem 0:
 # Complete the following function so that it returns the sum of the elements in the list passed as an argument.
 # Call your function several times in order to test it
@@ -27,9 +27,16 @@ def simple_calculator(num1, num2, operator):
         return num1 / num2
 result = simple_calculator(2, 3, "*")
 print(result)
-
+'''
 # Problem 2: Area of Shapes
 # Create a module named `geometry` with functions to calculate the area of common shapes
 # like a square, rectangle, triangle, and circle. Import this module and use it to calculate the areas of
 # different shapes. You should be able to use the function for calculating the area of a rectangle to calculate
 # the area of a square by passing in only one argument.
+import geometry
+print(geometry.area_square(3))
+print(geometry.area_rectangle(4, 4))
+print(geometry.area_triangle(4, 5))
+print(geometry.area_circle(2))
+
+
