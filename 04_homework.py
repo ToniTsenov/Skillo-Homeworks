@@ -27,7 +27,8 @@ def simple_calculator(num1, num2, operator):
         return num1 / num2
 result = simple_calculator(2, 3, "*")
 print(result)
-'''
+
+
 # Problem 2: Area of Shapes
 # Create a module named `geometry` with functions to calculate the area of common shapes
 # like a square, rectangle, triangle, and circle. Import this module and use it to calculate the areas of
@@ -38,5 +39,21 @@ print(geometry.area_square(3))
 print(geometry.area_rectangle(4, 4))
 print(geometry.area_triangle(4, 5))
 print(geometry.area_circle(2))
+'''
+
+#Problem 3: Temperature Conversion
+# Write a program that converts temperatures between Celsius and Fahrenheit. Create two functions,
+# one for each conversion, and use them in a program to convert temperatures provided by the user.
+# Write another script which tests these functions.
+def celsius():
+    user_input = float(input("Enter temperature in Fahrenheit: "))
+    return (user_input - 32) / 1.8
+temperature_in_celsius = celsius()
+print(f"temperature in Celsius is {temperature_in_celsius:.2f}")
 
 
+def fahrenheit():
+    user_input = float(input("Enter temperature in Celsius: "))
+    return (user_input * 1.8) + 32
+temperature_in_fahrenheit = fahrenheit()
+print(f"Temperature in Fahrenheit is {temperature_in_fahrenheit:.2f}")
