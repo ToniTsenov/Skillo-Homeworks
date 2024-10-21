@@ -73,3 +73,16 @@ test_both()
 
 # Problem 4: Factorial(again):
 # Write a recursive function which computes the Factorial of a given integer.
+def factorial(x):
+    result = 1
+    for y in range(1, x + 1):
+        result *= y
+    return result
+num = int(input("Enter a number: "))
+print(f"The factorial of {num} is {factorial(num)}")
+
+
+# Problem 5: Online Shopping Cart
+# Create a Python program that simulates an online shopping cart using a global dictionary variable.
+# Every customer has unique id as a key. Define functions to add items to the cart, remove items, calculate the
+# total price, and display the contents of the cart. Allow the user to interact with the cart by adding and removing items.
