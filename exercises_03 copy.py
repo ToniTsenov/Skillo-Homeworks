@@ -75,8 +75,8 @@ for num in range (1, 21):
 # Write a program using a while loop to find the sum of all numbers from 1 to 100.
 
 total = 0
-number = 1
-while num <= 100:
+num = 1
+while num <= 99:
     total += num
     num += 1
     print(num)
@@ -98,13 +98,12 @@ for friend in friends:
 
 # Exercise 9: Guess the Number
 # Write a program that has a number and keeps asking the user to input a number until the user guesses it.
-
 secret_number = 42
-user_input = float(input("Guess the secret number?: "))
 while True:
+    user_input = float(input("Guess the secret number?: "))
     if user_input != secret_number:
         print("Wrong!Try again!")
-        user_input = float(input("Guess the secret number?: "))
+        continue
     else:
         print(f"You won!The secret number was {secret_number}")
         break  
