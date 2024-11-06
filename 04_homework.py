@@ -86,3 +86,103 @@ print(f"The factorial of {num} is {factorial(num)}")
 # Create a Python program that simulates an online shopping cart using a global dictionary variable.
 # Every customer has unique id as a key. Define functions to add items to the cart, remove items, calculate the
 # total price, and display the contents of the cart. Allow the user to interact with the cart by adding and removing items.
+
+# global variables to store the information
+shopping_carts = {}
+items = []
+prices = []
+quantities = []
+total = 0
+
+# function to add items to card
+def add_to_card():
+    customer_id = int(input("Enter custumer ID: "))
+    if customer_id not in shopping_carts:
+        shopping_carts[customer_id] = {"items": [], "prices": [], "quantities": []}
+
+    item = input("Enter item to add in card: ").strip().lower()
+    price = float(input("Enter price of item: "))
+    quantity = int(input("Enter quantity of item: "))
+    
+    # Access the customer's specific cart
+    cart = shopping_carts[customer_id]
+    cart["items"].append(item)
+    cart["prices"].append(price)
+    cart["quantities"].append(quantity)
+
+    total_price = price * quantity
+
+    print(f"Added {quantity}x {item}'s at total price of {total_price:.2f} BGN for customer {customer_id} ")
+
+# function to remove items from card
+def remove_from_card():
+    customer_id = int(input("Enter custumer ID: "))
+    if customer_id not in shopping_carts or not shopping_carts[customer_id]["items"]:
+            print("No items found in the cart for this customer.")
+            return
+
+    item = input("Enter item to remove from card: ").strip().lower()
+    quantity = int(input("Enter quantity: "))
+
+    cart = shopping_carts[customer_id]
+
+# Check if the item exists in the customer cart
+    if item in cart["items"]:
+        index = cart["items"].index(item)
+        
+        # Remove specified quantity or entire item if quantity matches or exceeds
+        if cart["quantities"][index] > quantity:
+            cart["quantities"][index] -= quantity
+            print(f"Removed {quantity} of {item} from customer {customer_id}'s cart.")
+        elif cart["quantities"][index] == quantity:
+            # Remove the item completely from cart if quantity matches
+            del cart["items"][index]
+            del cart["prices"][index]
+            del cart["quantities"][index]
+            print(f"Removed all of {item} from customer {customer_id}'s cart.")
+        else:
+            print("Quantity to remove exceeds quantity in the cart.")
+    else:
+        print(f"{item} not found in customer {customer_id}'s cart.")
+
+# Function to display the cart contents for a specific customer
+def display_cart(customer_id):
+#Display the contents of the customer cart.
+    if customer_id not in shopping_carts or not shopping_carts[customer_id]["items"]:
+        print("Cart is empty.")
+        return
+    
+    cart = shopping_carts[customer_id]
+    print(f"\nCart contents for customer {customer_id}:")
+    total = 0
+    for i in range(len(cart["items"])):
+        item_total = cart["prices"][i] * cart["quantities"][i]
+        total += item_total
+        print(f"{cart['quantities'][i]} x {cart['items'][i]} at ${cart['prices'][i]:.2f} each - Total: ${item_total:.2f}")
+    
+    print(f"\nTotal cart value: ${total:.2f}")
+
+
+# shopping card interface function
+def shopping_card_interface():
+    while True:
+        print("\nOptions: \n1. Add\n2. Remove\n3. Display\n4. Exit")
+        action = input("Enter action:(1-5): ").strip()
+
+        if action == "1":
+            add_to_card()
+
+        elif action == "2":
+            remove_from_card()
+
+        elif action == "3":
+            customer_id = int(input("Enter customer ID to display cart: "))
+            display_cart(customer_id)
+            
+        elif action == "4":
+            print("Exiting from shopping card. ")
+            break
+        else:
+            print("Invalid option!Please enter a valid option between 1 and 5. ")
+            continue
+shopping_card_interface()
