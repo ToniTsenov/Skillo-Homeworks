@@ -104,13 +104,9 @@ def word_frequency(text):
 
     return frequency
 
-# Example usage with a sample paragraph
+# Example paragraph
 sample_text = """
-Artificial intelligence (AI) is rapidly advancing in various sectors, transforming industries and 
-enhancing our daily lives. From healthcare to finance, AI-driven solutions provide unprecedented 
-efficiencies and capabilities, helping to automate routine tasks and analyze large datasets with 
-remarkable speed and accuracy. As AI technology evolves, it continues to push the boundaries of 
-what is possible, leading to new innovations and opportunities.
+Докато американците се събуждаха с новината, че Доналд Тръмп е спечелил президентските избори
 """
 # Calculate word frequency
 result = word_frequency(sample_text)
